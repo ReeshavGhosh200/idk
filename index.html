@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>9B news board decorations lights</h2>
+    <div style="display: flex; justify-content: center; align-items: center; height: 50vh;">
+        <div id="ledMatrix"></div>
+    </div>
+     <br>
+    <button id="on">Turn all on</button>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button id="off">Turn all off</button> <br> <br>
+    <div style="font-size: 15px;">* This is exact size of the display shown here is the actual size of the display in reality.</div>
+    <script>
+        const ledMatrix = document.getElementById("ledMatrix");
+        const on = document.getElementById("on");
+        const off = document.getElementById("off");
+
+        for (let i = 0; i < 64; i++) {
+        const LED = document.createElement("div");
+        LED.classList.add("led");
+        LED.innerHTML = "";
+        ledMatrix.appendChild(LED);
+        }
+
+        on.addEventListener("click", () => {
+        // Turn all LEDs on
+        const leds = document.querySelectorAll(".led");
+        leds.forEach(led => led.style.backgroundColor = "red");
+        });
+
+        off.addEventListener("click", () => {
+        // Turn all LEDs off
+        const leds = document.querySelectorAll(".led");
+        leds.forEach(led => led.style.backgroundColor = "grey");
+        });
+
+    </script>
+</body>
+</html>
