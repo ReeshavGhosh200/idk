@@ -13,8 +13,8 @@ body {
   display: grid;
   grid-template-columns: repeat(8, auto);
   gap: 0;
-  width: 2.8cm;
-  height: 2.8cm;
+  width: 28vw;
+  height: 28vw;
 }
 #ledMatrix .led {
   height: 13px;
@@ -39,3 +39,10 @@ button {
 button:hover {
   border-radius: 25px;
 }/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 480px) {
+  #ledMatrix {
+    width: 112px; /* Set fixed width in pixels for smaller screens */
+    height: 112px; /* Set fixed height in pixels for smaller screens */
+  }
+}
